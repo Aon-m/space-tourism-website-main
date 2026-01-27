@@ -1,0 +1,15 @@
+.attribution {
+  grid-area: attribution;
+  align-self: center;
+  & p {
+    color: var(--color-contrast-secondary);
+  }
+  & a {
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+}

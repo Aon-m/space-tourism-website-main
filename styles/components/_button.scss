@@ -1,0 +1,104 @@
+@use "../abstracts/mixins" as m;
+
+.button {
+  @include m.font(
+    "Rubik",
+    var(--font-weight-regular),
+    var(--size-font-smaller)
+  );
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  border: 0.2rem solid transparent;
+  cursor: pointer;
+  transition: 500ms ease;
+
+  &:hover {
+    transition: 200ms ease;
+  }
+
+  &--primary {
+    color: var(--color-contrast-secondary);
+    background: var(--color-primary);
+
+    &:hover:not(.button--no-hover-effect) {
+      color: var(--color-primary);
+      background: var(--color-contrast-secondary);
+      border: 0.2rem solid var(--color-primary);
+    }
+  }
+
+  &--secondary {
+    color: var(--color-contrast-secondary);
+    background: var(--color-secondary);
+
+    &:hover:not(.button--no-hover-effect) {
+      color: var(--color-secondary);
+      background: var(--color-contrast-secondary);
+      border: 0.2rem solid var(--color-secondary);
+    }
+  }
+
+  &--contrast {
+    color: var(--color-contrast-primary);
+    background: var(--color-contrast-secondary);
+    box-shadow: 0 calc(var(--size-tiny) - 0.1rem) var(--size-tiny)
+      var(--color-accent-border);
+
+    &:hover:not(.button--no-hover-effect) {
+      color: var(--color-contrast-primary);
+      background: var(--color-contrast-secondary);
+      border: 0.2rem solid var(--color-contrast-primary);
+    }
+  }
+
+  &--rectangle {
+    padding: calc(var(--size-smaller) + 0.3rem) calc(var(--size-small) - 0.3rem);
+    border-radius: var(--size-tiny);
+  }
+
+  &--content-changer {
+    font-weight: var(--font-weight-thin);
+    padding: 0 var(--size-small) calc(var(--size-smaller) + 0.2rem);
+
+    &--selected {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: 0;
+        width: 100%;
+        height: 0.2rem;
+        background: var(--color-secondary);
+      }
+    }
+
+    &:hover:not(.button--no-hover-effect) {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.dropdown-button {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  width: calc(var(--size-smaller) + 0.25rem);
+  cursor: pointer;
+  transform: rotate(0);
+  transition: color 500ms ease;
+
+  &:hover {
+    color: var(--color-secondary);
+    transition: 200ms ease;
+  }
+}
+
+@media screen and (min-width: 65rem) {
+  .button {
+    &--rectangle {
+      padding: var(--size-smaller) calc(var(--size-small) - 0.5rem);
+    }
+  }
+}

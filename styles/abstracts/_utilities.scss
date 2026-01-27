@@ -1,0 +1,10 @@
+.mobile-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 45rem) {
+  .mobile-hidden {
+    display: initial;
+  }
+}
+

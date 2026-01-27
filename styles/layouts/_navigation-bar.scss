@@ -1,0 +1,147 @@
+@use "../abstracts/mixins" as m;
+
+header {
+  @include m.flex(row, center, flex-start);
+  padding: var(--size-medium);
+}
+
+.nav {
+  &--desktop {
+    display: none;
+  }
+
+  &--mobile {
+    @include m.flex(column, center, flex-start);
+    position: relative;
+    padding: var(--size-medium);
+    gap: var(--size-medium);
+    width: 100%;
+    min-height: 30rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-contrast-primary);
+      opacity: 0.8;
+      z-index: -1;
+    }
+  }
+
+  &--dialog {
+    width: 100vw;
+    border: none;
+    max-width: none;
+    margin: 0;
+    background: none;
+
+    &::backdrop {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__hamburger {
+    order: -1;
+    position: absolute;
+    right: var(--size-small);
+    cursor: pointer;
+  }
+
+  &__links {
+    @include m.flex(column);
+    width: min(100%, 15rem);
+  }
+
+  &__link {
+    color: var(--color-contrast-secondary);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include m.font(
+      "Rubik",
+      var(--font-weight-thin),
+      calc(var(--size-font-small) - 0.25rem)
+    );
+  }
+
+  &__top {
+    @include m.flex(row, center, space-between);
+    width: 100%;
+  }
+
+  &__logo {
+    width: 2rem;
+    height: auto;
+    color: var(--color-contrast-secondary);
+    color: var(--color-contrast-secondary);
+  }
+
+  &__item {
+    list-style: none;
+    @include m.flex(row, center);
+    padding-block: calc(var(--size-smaller) + 0.5rem);
+    width: 100%;
+    text-align: center;
+    border-block-end: 0.05rem solid var(--color-accent-muted);
+
+    &:first-of-type {
+      border-block: 0.05rem solid var(--color-accent-muted);
+    }
+  }
+
+  &__close-button {
+    background: none;
+    border: none;
+    width: fit-content;
+    font-size: var(--size-font-medium);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    padding: var(--size-small) var(--size-large) 0;
+    justify-content: space-between;
+  }
+
+  .nav {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      @include m.flex(row);
+      gap: var(--size-small);
+      width: fit-content;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__links {
+      flex-direction: row;
+      gap: var(--size-small);
+      width: auto;
+    }
+
+    &__item {
+      border-block-end: none;
+
+      &:first-of-type {
+        border-block: none;
+      }
+    }
+
+    &__link {
+      color: var(--color-contrast-primary);
+      text-transform: lowercase;
+    }
+  }
+}
