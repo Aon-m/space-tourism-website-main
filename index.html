@@ -11,16 +11,20 @@
       href="./assets/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="./css/styles.css">
-
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./scripts/main.js" defer></script>
 
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
-   <header>
+    <header>
       <!-- Logo -->
 
-      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+      <svg
+        class="nav__logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 48 48"
+      >
         <g fill="none" fill-rule="evenodd">
           <circle cx="24" cy="24" r="24" fill="#FFF" />
           <path
@@ -31,13 +35,8 @@
       </svg>
 
       <!-- Hamburger -->
-      <button aria-label="Open Menu" id="hamburger">
-        <svg
-          class="nav__hamburger"
-          width="20"
-          height="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+      <button class="nav__hamburger" aria-label="Open Menu" id="hamburger">
+        <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z"
             fill="currentColor"
@@ -55,7 +54,10 @@
             </a>
           </li>
           <li class="nav__item text--small">
-            <a class="nav__link fast-slow-hover" href="./destination/index.html">
+            <a
+              class="nav__link fast-slow-hover"
+              href="./destination/index.html"
+            >
               <span class="nav__index" aria-hidden="true">01</span>
               Destination
             </a>
@@ -102,30 +104,42 @@
               </g>
             </svg>
 
-            <button aria-label="Close Menu" class="nav__close-button" id="close-button">&times;</button>
+            <button
+              aria-label="Close Menu"
+              class="nav__close-button"
+              id="close-button"
+            >
+              &times;
+            </button>
           </div>
 
           <ul class="nav__links">
             <li class="nav__item text--small">
-              <a classnav__link ="fast-slow-hover" href="./index.html">
+              <a classnav__link="fast-slow-hover" href="./index.html">
                 <span class="nav__index" aria-hidden="true">00</span>
                 Home
               </a>
             </li>
             <li class="nav__item text--small">
-              <a classnav__link ="fast-slow-hover" href="./destination/index.html">
+              <a
+                classnav__link="fast-slow-hover"
+                href="./destination/index.html"
+              >
                 <span class="nav__index" aria-hidden="true">01</span>
                 Destination
               </a>
             </li>
             <li class="nav__item text--small">
-              <a classnav__link ="fast-slow-hover" href="./crew/index.html">
+              <a classnav__link="fast-slow-hover" href="./crew/index.html">
                 <span class="nav__index" aria-hidden="true">02</span>
                 Crew
               </a>
             </li>
             <li class="nav__item text--small">
-              <a classnav__link ="fast-slow-hover" href="./technology/index.html">
+              <a
+                classnav__link="fast-slow-hover"
+                href="./technology/index.html"
+              >
                 <span class="nav__index" aria-hidden="true">03</span>
                 Technology
               </a>
@@ -136,8 +150,10 @@
     </header>
     <main>
       <section class="container container--primary">
-        <div class="container__text-content ">
-          <p class="container__description text--medium">So, you want to travel to</p>
+        <div class="container__text-content">
+          <p class="container__description text--medium">
+            So, you want to travel to
+          </p>
           <h1 class="container__title text--larger">Space</h1>
           <p class="container__description text--small">
             Let’s face it; if you want to go to space, you might as well

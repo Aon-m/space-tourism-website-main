@@ -456,6 +456,8 @@ header {
   position: absolute;
   right: var(--size-small);
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 .nav__links {
   display: flex;
@@ -504,11 +506,9 @@ header {
 .nav__close-button {
   background: none;
   border: none;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: var(--size-smaller);
   font-size: var(--size-font-medium);
-}
-.nav__close-button:hover {
+  color: var(--color-contrast-secondary);
   cursor: pointer;
 }
 

@@ -11,7 +11,8 @@
       href="../assets/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
 
     <title>Frontend Mentor | Space tourism website</title>
   </head>
@@ -19,7 +20,11 @@
     <header>
       <!-- Logo -->
 
-      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+      <svg
+        class="nav__logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 48 48"
+      >
         <g fill="none" fill-rule="evenodd">
           <circle cx="24" cy="24" r="24" fill="#FFF" />
           <path
@@ -30,13 +35,8 @@
       </svg>
 
       <!-- Hamburger -->
-      <button aria-label="Open Menu" id="hamburger">
-        <svg
-          class="nav__hamburger"
-          width="20"
-          height="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+      <button class="nav__hamburger" aria-label="Open Menu" id="hamburger">
+        <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z"
             fill="currentColor"
@@ -69,7 +69,10 @@
             </a>
           </li>
           <li class="nav__item text--small">
-            <a class="nav__link fast-slow-hover" href="../technology/index.html">
+            <a
+              class="nav__link fast-slow-hover"
+              href="../technology/index.html"
+            >
               <span class="nav__index" aria-hidden="true">03</span>
               Technology
             </a>
@@ -104,7 +107,13 @@
               </g>
             </svg>
 
-            <button aria-label="Close Menu" id="close-button">&times;</button>
+            <button
+              class="nav__close-button"
+              aria-label="Close Menu"
+              id="close-button"
+            >
+              &times;
+            </button>
           </div>
 
           <ul class="nav__links">
@@ -153,48 +162,82 @@
 
         <div class="container__sub-container">
           <div class="container container--secondary">
+            <div class="container__navigation">
+              <button
+                type="button"
+                class="button button--navigation"
+                id="back-btn"
+              >
+                <svg
+                  class="card__icon"
+                  width="15"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 0L1 12l12 12"
+                    stroke="currentColor"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="button button--navigation"
+                id="forward-btn"
+              >
+                <svg
+                  class="card__icon"
+                  width="14"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0l12 12L1 24"
+                    stroke="currentColor"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
             <div class="container__text-content">
-              <h3 class="container__title text--large">
-                <span class="text--secondary text--medium">Flight Engineer</span>
+              <h3 class="container__title text--medium" id="role">
+                Flight Engineer
+              </h3>
+              <h3 class="container__title text--large" id="name">
                 Anousheh Ansari
               </h3>
-              <p class="container__description text--small">
+
+              <p id="bio" class="container__description text--small">
                 Anousheh Ansari is an Iranian American engineer and co-founder
                 of Prodea Systems. Ansari was the fourth self-funded space
                 tourist, the first self-funded woman to fly to the ISS, and the
                 first Iranian in space.
               </p>
-              <div class="container__buttons container__buttons--primary">
-                <button
-                type="button"
-                id="content-changer-1"
-                class="button button--content-changer button--indicator"
-                >
-              </button>
-              
-              <button
-              type="button"
-              id="content-changer-2"
-              class="button button--content-changer button--indicator"
-                  >
-                </button>
-                
-                <button
-                type="button"
-                id="content-changer-3"
-                class="button button--content-changer button--indicator"
-                >
-              </button>
-              
-              <button
-              type="button"
-              id="content-changer-3"
-              class="button button--content-changer button--indicator button--content-changer--selected button--no-hover-effect"
-                >
-                </button>
+              <div class="container__indicators">
+                <div class="indicator"></div>
+
+                <div class="indicator"></div>
+
+                <div class="indicator"></div>
+
+                <div class="indicator"></div>
               </div>
             </div>
-            <div class="container__image"></div>
+            <picture class="container__image">
+              <source
+                srcset="../assets/crew/image-anousheh-ansari.webp"
+                type="image/webp"
+                id="img-webp"
+              />
+              <img
+                src="../assets/crew/image-anousheh-ansari.png"
+                alt="image of the individual"
+                id="img-png"
+              />
+            </picture>
           </div>
         </div>
       </section>

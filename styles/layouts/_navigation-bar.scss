@@ -48,6 +48,8 @@ header {
     position: absolute;
     right: var(--size-small);
     cursor: pointer;
+    border: none;
+    background: transparent;
   }
 
   &__links {
@@ -95,12 +97,10 @@ header {
   &__close-button {
     background: none;
     border: none;
-    width: fit-content;
+    width: var(--size-smaller);
     font-size: var(--size-font-medium);
-
-    &:hover {
-      cursor: pointer;
-    }
+    color: var(--color-contrast-secondary);
+    cursor: pointer;
   }
 }
 

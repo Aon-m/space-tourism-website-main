@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="../scripts/main.js" defer></script>
 
 
     <title>Frontend Mentor | Space tourism website</title>
@@ -31,9 +32,8 @@
       </svg>
 
       <!-- Hamburger -->
-      <button aria-label="Open Menu" id="hamburger">
+      <button class="nav__hamburger" aria-label="Open Menu" id="hamburger">
         <svg
-          class="nav__hamburger"
           width="20"
           height="14"
           xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@
               </g>
             </svg>
 
-            <button aria-label="Close Menu" id="close-button">&times;</button>
+            <button class="nav__close-button" aria-label="Close Menu" id="close-button">&times;</button>
           </div>
 
           <ul class="nav__links">
@@ -145,7 +145,10 @@
 
         <div class="container__sub-container">
           <div class="container container--secondary">
-            <div class="container__image"></div>
+            <picture class="container__image">
+              <source srcset="../assets/destination/image-mars.webp" type="image/webp" id="img-webp">
+              <img src="../assets/destination/image-mars.png" alt="image of the planet" id="img-png">
+            </picture>
             <div
               class="container__text-content "
             >
@@ -182,8 +185,8 @@
                   Titan
                 </button>
               </div>
-              <h3 class="container__title text--larger">Mars</h3>
-              <p class="container__description text--small">
+              <h3 class="container__title text--larger" id="name">Mars</h3>
+              <p class="container__description text--small" id="description">
                 Don’t forget to pack your hiking boots. You’ll need them to
                 tackle Olympus Mons, the tallest planetary mountain in our solar
                 system. It’s two and a half times the size of Everest!
@@ -193,11 +196,11 @@
               >
                 <div class="container__text-content--primary">
                   <h3 class="container__title text--small">Avg. distance</h3>
-                  <p class="container__description text--medium">225 mil. km</p>
+                  <p class="container__description text--medium" id="distance">225 mil. km</p>
                 </div>
                 <div class="container__text-content--primary">
                   <h3 class="container__title text--small">Est. travel time</h3>
-                  <p class="container__description text--medium">9 months</p>
+                  <p class="container__description text--medium" id="travel">9 months</p>
                 </div>
               </div>
             </div>

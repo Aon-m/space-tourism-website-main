@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="../scripts/main.js" defer></script>
 
     <title>Frontend Mentor | Space tourism website</title>
   </head>
@@ -30,9 +31,10 @@
       </svg>
 
       <!-- Hamburger -->
-      <button aria-label="Open Menu" id="hamburger">
-        <svg
+      <button 
           class="nav__hamburger"
+       aria-label="Open Menu" id="hamburger">
+        <svg
           width="20"
           height="14"
           xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +106,7 @@
               </g>
             </svg>
 
-            <button aria-label="Close Menu" id="close-button">&times;</button>
+            <button class="nav__close-button" aria-label="Close Menu" id="close-button">&times;</button>
           </div>
 
           <ul class="nav__links">
@@ -179,11 +181,11 @@
               </button>
             </div>
             <div class="container__text-content">
-              <h3 class="container__title text--large">
+              <h3 class="container__title text--large" id="name">
                 <span class="text--small"> The terminology... </span>
                 Launch vehicle
               </h3>
-              <p class="container__description text--small">
+              <p class="container__description text--small" id="description">
                 A launch vehicle or carrier rocket is a rocket-propelled vehicle
                 used to carry a payload from Earth's surface to space, usually
                 to Earth orbit or beyond. Our WEB-X carrier rocket is the most
@@ -191,7 +193,10 @@
                 awe-inspiring sight on the launch pad!
               </p>
             </div>
-            <div class="container__image"></div>
+            <picture class="container__image">
+              <source media="(min-width: 40rem)" srcset="../assets/technology/image-launch-vehicle-landscape.jpg" id="img-landscape">
+              <img src="../assets/technology/image-launch-vehicle-portrait.jpg" alt="image of the technology" id="img-portrait">
+            </picture>
           </div>
         </div>
       </section>
