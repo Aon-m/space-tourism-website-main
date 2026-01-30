@@ -3,24 +3,14 @@
 .container {
   @include m.flex(column);
   gap: var(--size-large);
-  padding: var(--size-medium);
+  padding-block: var(--size-medium);
   width: 100%;
+  position: relative;
 
   &__image {
     @include m.flex(column);
     height: auto;
-
-    &--small {
-      max-width: 20rem;
-    }
-    &--medium {
-      max-width: 35rem;
-    }
-
-    &--large {
-      max-width: 50rem;
-      order: -1;
-    }
+    width: 100%;
   }
 
   &__text-content {
@@ -34,32 +24,23 @@
     gap: var(--size-medium);
   }
 
-  &__title {
-    @include m.font("Rubik", var(--font-weight-regular));
-    color: var(--color-contrast-primary);
-
-    &--small {
-      font-size: var(--size-font-medium);
-    }
-    &--medium {
-      font-size: var(--size-font-large);
-    }
-    &--large {
-      font-size: var(--size-font-larger);
-    }
-  }
-
-  &__description {
-    @include m.font("Rubik", var(--font-weight-light), var(--size-font-small));
-    color: var(--color-contrast-primary);
-    opacity: 0.5;
-    width: 40ch;
-    line-height: 1.5;
-  }
-
   &__buttons {
     @include m.flex(row);
     gap: var(--size-small);
+  }
+
+  &__indicators {
+    @include m.flex(row);
+    gap: var(--size-small);
+  }
+
+  &__navigation {
+    @include m.flex(row, center, space-between);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -73,36 +54,6 @@
 
     &__buttons {
       flex-direction: row;
-    }
-
-    &__descriptions {
-      width: 47ch;
-    }
-  }
-}
-
-@media screen and (min-width: 60rem) {
-  .container {
-    &--primary {
-      flex-direction: row;
-      min-height: 20rem;
-
-      & .container__text-content {
-        text-align: left;
-        align-items: flex-start;
-      }
-    }
-
-    &__image {
-      &--large {
-        order: 0;
-      }
-    }
-
-    &__title {
-      &--medium {
-        width: 15ch;
-      }
     }
   }
 }

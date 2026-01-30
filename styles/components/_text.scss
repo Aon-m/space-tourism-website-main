@@ -1,0 +1,40 @@
+.text {
+  color: var(--color-primary);
+  text-align: center;
+
+  &__description {
+    color: var(--color-secondary);
+    width: 40ch;
+    line-height: 1.5;
+
+    @media screen and (min-width: 45rem) {
+      width: 47ch;
+    }
+  }
+
+  &--small {
+    font-size: var(--size-font-small);
+  }
+  &--medium {
+    font-size: var(--size-font-medium);
+  }
+  &--large {
+    font-size: var(--size-font-large);
+  }
+  &--larger {
+    font-size: var(--size-font-larger);
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--lowercase {
+    text-transform: lowercase;
+  }
+
+  &--wide-screen-align-left {
+    @media screen and (min-width: 40rem) {
+      text-align: left;
+    }
+  }
+}

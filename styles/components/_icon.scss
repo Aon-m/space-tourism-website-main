@@ -1,0 +1,21 @@
+.icon {
+  color: var(--color-contrast-secondary);
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &__path {
+    stroke-width: 3;
+  }
+
+  &--small {
+    width: 1rem;
+    height: auto;
+  }
+}

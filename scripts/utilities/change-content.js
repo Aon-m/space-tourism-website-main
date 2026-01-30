@@ -92,13 +92,13 @@ export const changeContent = (function () {
 
   function renderStyles(e) {
     changeBtns.forEach((b) => {
-      b.classList.remove("button--content-changer--selected");
+      b.classList.remove("button--selected");
       b.classList.remove("button--no-hover-effect");
     });
 
     const btn = e.currentTarget;
 
-    btn.classList.add("button--content-changer--selected");
+    btn.classList.add("button--selected");
     btn.classList.add("button--no-hover-effect");
   }
   const renderDestination = (function () {
@@ -117,8 +117,7 @@ export const changeContent = (function () {
       document.getElementById("img-landscape").srcset = data.images.landscape;
       document.getElementById("img-portrait").src = data.images.portrait;
 
-      document.getElementById("name").innerHTML =
-        `<h3 class="container__title text--large"><span class="text--small"> The terminology... </span>${data.name}</h3>`;
+      document.getElementById("name").textContent = data.name;
       document.getElementById("description").textContent = data.description;
     }
 

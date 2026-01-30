@@ -1,12 +1,13 @@
 .attribution {
-  grid-area: attribution;
-  align-self: center;
-  & p {
+  width: 100%;
+  text-align: center;
+  padding-block-end: var(--size-smaller);
+
+  &__text {
     color: var(--color-contrast-secondary);
   }
-  & a {
+  &__link {
     color: var(--color-primary);
-    text-decoration: none;
 
     &:hover {
       color: var(--color-secondary);

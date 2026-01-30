@@ -1,10 +1,21 @@
+@use "../abstracts/mixins" as m;
+
 .mobile-hidden {
   display: none;
-}
 
-@media screen and (min-width: 45rem) {
-  .mobile-hidden {
+  @media screen and (min-width: 45rem) {
     display: initial;
   }
 }
 
+.order {
+  &-mobile-first {
+    order: -1;
+  }
+
+  &-desktop-last {
+    @media (min-width: 60rem) {
+      order: 1;
+    }
+  }
+}

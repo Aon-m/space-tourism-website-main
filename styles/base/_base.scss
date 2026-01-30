@@ -1,18 +1,18 @@
 :root {
   /* Colors */
   /* Bright colors */
-  --color-primary: hsl(231, 69%, 60%);
-  --color-secondary: hsl(0, 94%, 66%);
+  --color-primary: hsla(0, 0%, 100%, 0.9);
+  --color-secondary: hsla(0, 0%, 100%, 0.8);
 
   /* Contrast colors */
-  --color-contrast-primary: hsl(0, 0%, 13%);
+  --color-contrast-primary: hsl(0, 0%, 0%);
   --color-contrast-secondary: hsl(0, 0%, 100%);
 
   /* Medium neutrals */
   --color-neutral-light: hsl(0, 0%, 96%);
   --color-neutral-mid: hsl(0, 0%, 80%);
   --color-neutral-dark: hsl(0, 0%, 33%);
-  
+
   /* Muted */
   --color-accent-muted: hsla(0, 0%, 55%, 0.549);
   --color-accent-border: hsl(0, 0%, 87%);
@@ -37,24 +37,18 @@
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
-}
 
-/* Tablet */
-
-@media screen and (min-width: 40rem) {
-  :root {
+  /* Tablet */
+  @media screen and (min-width: 40rem) {
     /* Font sizes */
     --size-font-small: clamp(1rem, calc(0.8rem + 0.4vw), 1.5rem);
     --size-font-medium: clamp(1.5rem, calc(1.5rem + 0.8vw), 2.5rem);
     --size-font-large: clamp(2.5rem, calc(2rem + 0.9vw), 3.5rem);
     --size-font-larger: clamp(3rem, calc(3rem + 1vw), 4rem);
   }
-}
 
-/* Desktop */
-
-@media screen and (min-width: 65rem) {
-  :root {
+  /* Desktop */
+  @media screen and (min-width: 65rem) {
     /* size-Font sizes */
     --size-font-small: clamp(0.8rem, calc(0.8rem + 0.3vw), 7rem);
     --size-font-medium: clamp(1rem, calc(1rem + 0.5vw), 10rem);

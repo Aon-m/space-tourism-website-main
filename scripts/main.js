@@ -36,3 +36,7 @@ switch (true) {
     backBtn.addEventListener("click", move.looping.prev);
     break;
 }
+
+document.querySelectorAll(".container").forEach((container) => {
+  container.classList.add("fade-in");
+});

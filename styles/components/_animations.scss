@@ -8,66 +8,45 @@
   }
 }
 
-.rotate-forward {
-  animation: rotateForward 400ms ease forwards;
+// Fade in
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade 0.6s ease forwards;
+  will-change: opacity;
+}
+
+.fade-out {
+  animation: fade 0.6s ease reverse;
+  will-change: opacity;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(350deg);
+  }
+}
+
+.rotate {
+  animation: rotate 60s linear infinite;
   will-change: transform;
-}
-.rotate-backward {
-  animation: rotateBackward 200ms ease forwards;
-  will-change: transform;
-}
-
-@keyframes rotateForward {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes rotateBackward {
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.open-div {
-  animation: open-up 400ms ease forwards;
-  will-change: max-height;
-}
-
-.close-div {
-  animation: close-down 200ms ease forwards;
-  will-change: max-height;
-}
-
-@keyframes open-up {
-  from {
-    max-height: 0;
-  }
-  to {
-    max-height: 20rem;
-  }
-}
-
-@keyframes close-down {
-  from {
-    max-height: 20rem;
-  }
-  to {
-    max-height: 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0s !important;
     transition-duration: 0s !important;
     scroll-behavior: auto !important;
   }
 }
-
