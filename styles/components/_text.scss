@@ -2,27 +2,50 @@
   color: var(--color-primary);
   text-align: center;
 
+  &__title {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: var(--font-weight-regular);
+  }
   &__description {
-    color: var(--color-secondary);
-    width: 40ch;
+    max-width: 40ch;
     line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
 
     @media screen and (min-width: 45rem) {
-      width: 47ch;
+      max-width: 45ch;
     }
+  }
+
+  &--serif {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  &--primary {
+    color: var(--color-secondary);
+  }
+  &--secondary {
+    color: var(--color-secondary);
+    opacity: 0.7;
+  }
+  &--tertiary {
+    opacity: 0.3;
   }
 
   &--small {
     font-size: var(--size-font-small);
+    font-weight: var(--font-weight-thin);
   }
   &--medium {
     font-size: var(--size-font-medium);
+    font-weight: var(--font-weight-regular);
   }
   &--large {
     font-size: var(--size-font-large);
+    font-weight: var(--font-weight-bold);
   }
   &--larger {
     font-size: var(--size-font-larger);
+    font-weight: var(--font-weight-bolder);
   }
 
   &--uppercase {
@@ -36,5 +59,11 @@
     @media screen and (min-width: 40rem) {
       text-align: left;
     }
+  }
+}
+
+@media screen and (min-width: 65rem) {
+  .text {
+    text-align: left;
   }
 }

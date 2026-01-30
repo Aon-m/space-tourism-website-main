@@ -19,3 +19,32 @@
 @use "./layouts/container";
 @use "./layouts/navigation-bar";
 @use "./layouts/backgrounds";
+
+body {
+  @include m.flex(column);
+  position: relative;
+}
+
+main {
+  align-self: center;
+  margin-block: auto;
+  margin-block-end: var(--size-large);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+div[data-page="destination"] {
+  gap: calc(var(--size-medium) + 5vw);
+}
+
+section[data-page="home"] {
+  @media screen and (min-width: 60rem) {
+    min-width: 50rem;
+  }
+  @media screen and (min-width: 70rem) {
+    gap: calc(15rem + 10vw);
+  }
+}

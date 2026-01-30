@@ -45,6 +45,8 @@
         </svg>
       </button>
 
+      <hr class="nav__decoration" />
+
       <nav class="nav nav--desktop">
         <ul class="nav__links text text--smalls">
           <li class="nav__item">
@@ -154,16 +156,18 @@
       </dialog>
     </header>
     <main>
-      <section class="container container--primary">
-        <div class="container__text-content">
-          <h2 class="text__title text text--medium text--wide-screen-align-left">
-            <span class="text--index">02</span>
+      <section class="container container--secondary fade-in">
+        <div class="container__text-content container__text-content--primary">
+          <h2
+            class="text__title text text--medium text--uppercase text--wide-screen-align-left"
+          >
+            <span class="text--tertiary">02</span>
             Meet your crew
           </h2>
         </div>
 
         <div class="container__sub-container">
-          <div class="container container--secondary">
+          <div class="container container--primary">
             <div class="container__navigation">
               <button
                 type="button"
@@ -171,7 +175,7 @@
                 id="back-btn"
               >
                 <svg
-                  class="icon icon--small" 
+                  class="icon icon--small"
                   viewBox="0 0 14 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -190,7 +194,7 @@
                 id="forward-btn"
               >
                 <svg
-                  class="icon icon--small" 
+                  class="icon icon--small"
                   viewBox="0 0 14 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -220,29 +224,43 @@
                 />
               </picture>
             </div>
-            <div class="container__indicators">
-              <div class="indicator"></div>
 
-              <div class="indicator"></div>
-
-              <div class="indicator"></div>
-
-              <div class="indicator"></div>
-            </div>
-            <div class="container__text-content">
-              <h3 class="text__title text text--medium" id="role">
+            <div
+              class="container__text-content container__text-content--primary"
+            >
+              <h3
+                class="text__title text--uppercase text text--medium text--tertiary"
+                id="role"
+              >
                 Flight Engineer
               </h3>
-              <h3 class="text__title text text--large" id="name">
+              <h3
+                class="text__title text--uppercase text text--large"
+                id="name"
+              >
                 Anousheh Ansari
               </h3>
 
-              <p id="bio" class="text__description text text--small">
+              <p
+                id="bio"
+                class="text__description text text--small text--secondary"
+              >
                 Anousheh Ansari is an Iranian American engineer and co-founder
                 of Prodea Systems. Ansari was the fourth self-funded space
                 tourist, the first self-funded woman to fly to the ISS, and the
                 first Iranian in space.
               </p>
+              <div
+                class="container__indicators order-mobile-first order-desktop-last"
+              >
+                <div class="indicator"></div>
+
+                <div class="indicator"></div>
+
+                <div class="indicator"></div>
+
+                <div class="indicator"></div>
+              </div>
             </div>
           </div>
         </div>

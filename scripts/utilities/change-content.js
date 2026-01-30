@@ -51,7 +51,9 @@ export const changeContent = (function () {
 
     renderStyles(e);
 
-    renderDestination.destinations(destinationsData[index]);
+    setTimeout(() => {
+      renderDestination.destinations(destinationsData[index]);
+    }, 400);
   }
 
   function technology(e, index) {
@@ -87,20 +89,55 @@ export const changeContent = (function () {
 
     renderStyles(e);
 
-    renderDestination.technology(technologyData[index]);
+    setTimeout(() => {
+      renderDestination.technology(technologyData[index]);
+    }, 400);
   }
 
   function renderStyles(e) {
+    // Button style
+    const btn = e.currentTarget;
+
     changeBtns.forEach((b) => {
       b.classList.remove("button--selected");
       b.classList.remove("button--no-hover-effect");
     });
 
-    const btn = e.currentTarget;
-
     btn.classList.add("button--selected");
     btn.classList.add("button--no-hover-effect");
+
+    // Animation
+    const subContainer = document.querySelector(".container__sub-container");
+    const container = subContainer.querySelector(":scope > .container");
+    const textContainer = container.querySelector(
+      ":scope > .container__text-content",
+    );
+    const Children = textContainer.querySelectorAll(
+      ":scope > *:not(.container__buttons):not(button)",
+    );
+    const imageChild = container.querySelector(":scope > .container__image");
+
+    Children.forEach((child) => {
+      child.classList.add("fade-out");
+      setTimeout(() => {
+        child.classList.add("fade-in");
+      }, 400);
+    });
+    imageChild.classList.add("fade-out");
+    setTimeout(() => {
+      imageChild.classList.add("fade-in");
+    }, 400);
+
+    Children.forEach((child) => {
+      setTimeout(() => {
+        child.classList.remove("fade-out");
+      }, 400);
+    });
+    setTimeout(() => {
+      imageChild.classList.remove("fade-out");
+    }, 400);
   }
+
   const renderDestination = (function () {
     function destinations(data) {
       document.getElementById("img-webp").srcset = data.images.webp;
@@ -114,8 +151,8 @@ export const changeContent = (function () {
     }
 
     function technology(data) {
-      document.getElementById("img-landscape").srcset = data.images.landscape;
-      document.getElementById("img-portrait").src = data.images.portrait;
+      document.getElementById("img-landscape").src = data.images.landscape;
+      document.getElementById("img-portrait").srcset = data.images.portrait;
 
       document.getElementById("name").textContent = data.name;
       document.getElementById("description").textContent = data.description;

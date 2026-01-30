@@ -17,7 +17,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body data-page="destination">
-    <header>
+    <header data-page="destination">
       <!-- Logo -->
 
       <svg
@@ -44,6 +44,8 @@
           />
         </svg>
       </button>
+
+      <hr class="nav__decoration" />
 
       <nav class="nav nav--desktop">
         <ul class="nav__links text text--smalls">
@@ -154,16 +156,18 @@
       </dialog>
     </header>
     <main>
-      <section class="container container--primary">
-        <div class="container__text-content">
-          <h2 class="text__title text text--medium text--wide-screen-align-left">
-            <span class="text--index">01</span>
+      <section class="container container--secondary fade-in">
+        <div class="container__text-content container__text-content--primary">
+          <h2
+            class="text__title text text--medium text--uppercase text--wide-screen-align-left"
+          >
+            <span class="text--tertiary">01</span>
             Pick your destination
           </h2>
         </div>
 
         <div class="container__sub-container">
-          <div class="container container--secondary">
+          <div data-page="destination" class="container container--primary">
             <div class="container__image">
               <picture class="picture picture--small rotate">
                 <source
@@ -180,12 +184,14 @@
                 />
               </picture>
             </div>
-            <div class="container__text-content">
+            <div
+              class="container__text-content container__text-content--primary"
+            >
               <div class="container__buttons container__buttons--primary">
                 <button
                   type="button"
                   id="content-changer-1"
-                  class="button button--content-changer button--rectangle text text--small"
+                  class="button button--content-changer  button--rectangle  text text--secondary text--small text--uppercase"
                 >
                   Moon
                 </button>
@@ -193,7 +199,7 @@
                 <button
                   type="button"
                   id="content-changer-2"
-                  class="button button--content-changer button--rectangle text text--small button--selected button--no-hover-effect"
+                  class="button button--content-changer  button--rectangle  text text--secondary text--small text--uppercase button--selected button--no-hover-effect"
                 >
                   Mars
                 </button>
@@ -201,7 +207,7 @@
                 <button
                   type="button"
                   id="content-changer-3"
-                  class="button button--content-changer button--rectangle text text--small"
+                  class="button button--content-changer  button--rectangle  text text--secondary text--small text--uppercase"
                 >
                   Europa
                 </button>
@@ -209,7 +215,7 @@
                 <button
                   type="button"
                   id="content-changer-3"
-                  class="button button--content-changer button--rectangle text text--small"
+                  class="button button--content-changer  button--rectangle  text text--secondary text--small text--uppercase"
                 >
                   Titan
                 </button>
@@ -220,31 +226,32 @@
               >
                 Mars
               </h3>
-              <p class="text__description text text--small" id="description">
+              <p class="text__description text--secondary text text--small" id="description">
                 Don’t forget to pack your hiking boots. You’ll need them to
                 tackle Olympus Mons, the tallest planetary mountain in our solar
                 system. It’s two and a half times the size of Everest!
               </p>
+              <hr class="decoration-hr" />
               <div
                 class="container__text-content container__text-content--secondary"
               >
-                <div class="container__text-content--primary">
-                  <h3 class="text__title text text--small text--uppercase">
+                <div class="container__text-content">
+                  <h3 class="text__title text text--small text--uppercase text--secondary ">
                     Avg. distance
                   </h3>
                   <p
-                    class="text__description text text--medium text--uppercase"
+                    class="text__description text--primary text text--medium text--uppercase"
                     id="distance"
                   >
                     225 mil. km
                   </p>
                 </div>
-                <div class="container__text-content--primary">
-                  <h3 class="text__title text text--small text--uppercase">
+                <div class="container__text-content">
+                  <h3 class="text__title text text--small text--uppercase text--secondary">
                     Est. travel time
                   </h3>
                   <p
-                    class="text__description text text--medium text--uppercase"
+                    class="text__description text--primary text text--medium text--uppercase"
                     id="travel"
                   >
                     9 months

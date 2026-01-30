@@ -27,9 +27,9 @@ Users should be able to:
 ## Screenshot
 
 <div
-  style="display: flex; gap: 1rem; align-items: flex-start; width: clamp(600px, 90%, 1000px); height: 2000px; padding-bottom: 2rem;"
+  style="display: flex; gap: 1rem; align-items: flex-start; width: clamp(600px, 90%, 1000px); height: 450px; padding-bottom: 2rem;"
 >
-  <figure style="margin: 0; height: 100%; text-align: center; width: 40%;">
+  <figure style="margin: 0; height: 300px; text-align: center; width: 40%;">
     <figcaption>Mobile preview</figcaption>
     <img
       src="previews/mobile-preview.jpeg"

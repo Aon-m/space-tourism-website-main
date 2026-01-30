@@ -1,19 +1,41 @@
 .picture {
   &--large {
     width: 100%;
+
+    @media screen and (min-width: 60rem) {
+      height: 100%;
+      width: auto;
+    }
   }
   &--medium {
     width: 80%;
+
+    @media screen and (min-width: 60rem) {
+      height: 80%;
+      width: auto;
+    }
   }
   &--small {
     width: 50%;
+
+    @media screen and (min-width: 60rem) {
+      height: 50%;
+      width: auto;
+    }
   }
 
   &__img {
     width: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: 60rem) {
+      height: 100%;
+      width: auto;
+      max-height: 35rem;
+    }
   }
 
   &__source {
-    width: 100%;
+    display: block;
   }
 }

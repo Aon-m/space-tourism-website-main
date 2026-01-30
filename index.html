@@ -17,7 +17,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body data-page="home">
-    <header>
+    <header data-page="home">
       <!-- Logo -->
 
       <svg
@@ -44,6 +44,8 @@
           />
         </svg>
       </button>
+
+      <hr class="nav__decoration" />
 
       <nav class="nav nav--desktop">
         <ul class="nav__links text text--smalls">
@@ -154,13 +156,13 @@
       </dialog>
     </header>
     <main>
-      <section class="container container--primary">
-        <div class="container__text-content">
-          <p class="text__description text text--medium">
+      <section data-page="home" class="container container--primary fade-in">
+        <div class="container__text-content container__text-content--primary">
+          <p class="text__description text--secondary text text--medium text--uppercase">
             So, you want to travel to
           </p>
-          <h1 class="text__title text text--larger text--uppercase">Space</h1>
-          <p class="text__description text text--small">
+          <h1 class="text__title text text--larger text--uppercase text--serif">Space</h1>
+          <p class="text__description text--secondary text text--small">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
@@ -169,7 +171,7 @@
         </div>
         <div class="container__white-space">
           <button
-            class="button button--custom button--contrast-reverse button--medium button--circle text--medium text--uppercase"
+            class="button button--custom button--contrast-reverse button--medium button--circle text--medium text--uppercase text--serif"
           >
             Explore
           </button>

@@ -3,9 +3,13 @@
 header {
   @include m.flex(row, center, flex-start);
   padding: var(--size-medium);
+  width: 100%;
 }
 
 .nav {
+  width: 100%;
+  position: relative;
+
   &--desktop {
     display: none;
   }
@@ -15,7 +19,6 @@ header {
     position: relative;
     padding: var(--size-medium);
     gap: var(--size-medium);
-    width: 100%;
     min-height: 25rem;
 
     &::before {
@@ -62,6 +65,7 @@ header {
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     text-decoration: none;
+    padding-block: calc(var(--size-smaller) + 0.5rem);
   }
 
   &__index {
@@ -82,7 +86,6 @@ header {
   &__item {
     list-style: none;
     @include m.flex(row, center);
-    padding-block: calc(var(--size-smaller) + 0.5rem);
     width: 100%;
     text-align: center;
     border-block-end: 0.05rem solid var(--color-accent-muted);
@@ -100,6 +103,10 @@ header {
     color: var(--color-contrast-secondary);
     cursor: pointer;
   }
+
+  &__decoration {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 40rem) {
@@ -116,7 +123,7 @@ header {
     &--desktop {
       @include m.flex(row);
       gap: var(--size-small);
-      width: fit-content;
+      width: auto;
     }
 
     &__hamburger {
@@ -124,15 +131,16 @@ header {
     }
 
     &__logo {
-      margin: var(--size-small) var(--size-medium) 0;
+      margin-inline: var(--size-medium);
+      width: 10rem;
     }
 
     &__links {
       flex-direction: row;
       gap: var(--size-small);
       position: relative;
-      width: fit-content;
-      padding: var(--size-smaller) var(--size-medium);
+      width: auto;
+      padding-inline: var(--size-medium);
 
       &:before {
         content: "";
@@ -158,6 +166,14 @@ header {
     &__link {
       @include m.flex(row);
       gap: 0.25rem;
+      padding-block: var(--size-smaller);
+    }
+
+    &__decoration {
+      display: block;
+      border: 0.01rem solid var(--color-accent-muted);
+      width: 100%;
+      opacity: 0.3;
     }
   }
 }
@@ -167,6 +183,20 @@ header {
     &__index {
       display: block;
       opacity: 0.7;
+    }
+
+    &__logo {
+      margin-block: 0;
+    }
+
+    &__links {
+      margin: var(--size-small) 0;
+      padding-inline: calc(var(--size-large) + 1rem);
+      gap: var(--size-medium);
+    }
+
+    &__link {
+      padding-block: var(--size-small);
     }
   }
 }

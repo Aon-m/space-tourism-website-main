@@ -9,6 +9,12 @@
 }
 
 .order {
+  &-first {
+    order: 1;
+  }
+  &-last {
+    order: -1;
+  }
   &-mobile-first {
     order: -1;
   }
@@ -18,4 +24,16 @@
       order: 1;
     }
   }
+}
+
+.decoration-hr {
+  display: block;
+  border: 0.01rem solid var(--color-accent-muted);
+  width: 100%;
+  opacity: 0.3;
+  margin-block: auto var(--size-small);
+}
+
+.nav-selected {
+  border-block-end: 3px solid var(--color-primary);
 }

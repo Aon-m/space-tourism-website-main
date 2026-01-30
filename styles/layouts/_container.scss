@@ -5,7 +5,6 @@
   gap: var(--size-large);
   padding-block: var(--size-medium);
   width: 100%;
-  position: relative;
 
   &__image {
     @include m.flex(column);
@@ -15,8 +14,13 @@
 
   &__text-content {
     @include m.flex(column);
-    gap: var(--size-small);
-    text-align: center;
+
+    &--primary {
+      gap: var(--size-small);
+    }
+    &--secondary {
+      gap: 1rem;
+    }
   }
 
   &__cards {
@@ -31,7 +35,7 @@
 
   &__indicators {
     @include m.flex(row);
-    gap: var(--size-small);
+    gap: var(--size-smaller);
   }
 
   &__navigation {
@@ -39,8 +43,14 @@
     width: 100%;
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__sub-container {
+    opacity: 1;
+    position: relative;
+    transition: opacity 0.6s ease;
   }
 }
 
@@ -52,8 +62,81 @@
       flex-direction: row;
     }
 
+    &__text-content {
+      &--secondary {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: var(--size-large);
+      }
+    }
+
     &__buttons {
       flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: 61rem) {
+  .container {
+    padding: 0;
+    opacity: 1;
+
+    &--primary {
+      flex-direction: row;
+      min-height: 25rem;
+      justify-content: space-between;
+
+      gap: var(--size-medium);
+    }
+
+    &__sub-container {
+      width: 100%;
+      opacity: 1;
+      min-width: 55rem;
+
+      @media screen and (min-width: 65rem) {
+        min-width: 60rem;
+      }
+
+      @media screen and (min-width: 70rem) {
+        min-width: 65rem;
+      }
+    }
+
+    &__text-content {
+      align-items: flex-start;
+
+      &--primary {
+        align-self: stretch;
+        width: 100%;
+      }
+    }
+
+    &__buttons {
+      &--secondary {
+        flex-direction: column;
+      }
+    }
+    &__image {
+      height: 100%;
+      width: auto;
+      align-self: flex-end;
+      justify-self: flex-end;
+      margin-inline-start: auto;
+    }
+    &__indicators {
+      margin-block-start: 2rem;
+    }
+    &__navigation {
+      width: 110%;
+    }
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    &__navigation {
+      width: 150%;
     }
   }
 }

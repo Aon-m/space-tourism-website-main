@@ -17,7 +17,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body data-page="technology">
-    <header>
+    <header data-page="technology">
       <!-- Logo -->
 
       <svg
@@ -44,6 +44,8 @@
           />
         </svg>
       </button>
+
+      <hr class="nav__decoration" />
 
       <nav class="nav nav--desktop">
         <ul class="nav__links text text--smalls">
@@ -154,31 +156,33 @@
       </dialog>
     </header>
     <main>
-      <section class="container container--primary">
-        <div class="container__text text--content">
-          <h2 class="text__title text text--medium text--wide-screen-align-left">
-            <span class="text--index">03</span>
+      <section class="container container--secondary fade-in">
+        <div class="container__text-content container__text-content--primary">
+          <h2
+            class="text__title text text--medium text--uppercase text--wide-screen-align-left"
+          >
+            <span class="text--tertiary">03</span>
             Space Launch 101
           </h2>
         </div>
 
         <div class="container__sub-container">
-          <div class="container container--secondary">
-            <div class="container__image">
+          <div class="container container--primary">
+            <div class="container__image order-mobile-first order-desktop-last">
               <picture class="picture picture--large">
                 <source
                   class="picture__source"
-                  media="(min-width: 40rem)"
+                  media="(min-width: 60rem)"
                   srcset="
-                    ../assets/technology/image-launch-vehicle-landscape.jpg
+                    ../assets/technology/image-launch-vehicle-portrait.jpg
                   "
-                  id="img-landscape"
+                  id="img-portrait"
                 />
                 <img
                   class="picture__img"
-                  src="../assets/technology/image-launch-vehicle-portrait.jpg"
+                  src="../assets/technology/image-launch-vehicle-landscape.jpg"
                   alt="image of the technology"
-                  id="img-portrait"
+                  id="img-landscape"
                 />
               </picture>
             </div>
@@ -207,12 +211,22 @@
                 3
               </button>
             </div>
-            <div class="container__text text--content">
-              <h4 class="text text--small">The terminology...</h4>
-              <h3 class="text__title text text--large" id="name">
+            <div
+              class="container__text-content container__text-content--primary"
+            >
+              <h4 class="text text--small text--uppercase text--secondary">
+                The terminology...
+              </h4>
+              <h3
+                class="text__title text text--large text--uppercase"
+                id="name"
+              >
                 Launch vehicle
               </h3>
-              <p class="text__description text text--small" id="description">
+              <p
+                class="text__description text text--small text--secondary"
+                id="description"
+              >
                 A launch vehicle or carrier rocket is a rocket-propelled vehicle
                 used to carry a payload from Earth's surface to space, usually
                 to Earth orbit or beyond. Our WEB-X carrier rocket is the most

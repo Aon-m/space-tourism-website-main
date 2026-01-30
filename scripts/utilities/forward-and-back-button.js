@@ -1,5 +1,5 @@
 const move = (function () {
-  let currentIndex = 0;
+  let currentIndex = 3;
   const crewData = [
     {
       name: "Douglas Hurley",
@@ -43,8 +43,10 @@ const move = (function () {
   // Internal function to update content
   function update() {
     renderStyles();
-
-    renderDestination.crew(crewData[currentIndex]);
+    
+    setTimeout(() => {
+      renderDestination.crew(crewData[currentIndex]);
+    }, 400);
   }
 
   const nonLooping = (function () {
@@ -95,7 +97,29 @@ const move = (function () {
 
     const indicator = indicators[currentIndex];
 
-    indicator.classList.add("indicator--selected");
+    setTimeout(() => {
+      indicator.classList.add("indicator--selected");
+    }, 400);
+
+    // Animation
+    const subContainer = document.querySelector(".container__sub-container");
+    const container = subContainer.querySelector(":scope > .container");
+    const Children = container.querySelectorAll(
+      ":scope > *:not(.container__navigation)",
+    );
+
+    Children.forEach((child) => {
+      child.classList.add("fade-out");
+      setTimeout(() => {
+        child.classList.add("fade-in");
+      }, 400);
+    });
+
+    Children.forEach((child) => {
+      setTimeout(() => {
+        child.classList.remove("fade-out");
+      }, 400);
+    });
   }
 
   const renderDestination = (function () {
