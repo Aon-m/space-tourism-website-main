@@ -15,9 +15,3 @@ const navBar = (function () {
 })();
 
 export default navBar;
-
-const hamburger = document.querySelector(".nav__hamburger"),
-  closeBtn = document.querySelector(".nav__close-button");
-
-hamburger.addEventListener("click", navBar.show);
-closeBtn.addEventListener("click", navBar.close);
