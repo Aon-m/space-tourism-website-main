@@ -139,23 +139,23 @@ export const changeContent = (function () {
   }
 
   const renderDestination = (function () {
-    function destinations(data) {
-      document.getElementById("img-webp").srcset = data.images.webp;
-      document.getElementById("img-png").src = data.images.png;
+    function destinations(sectionData) {
+      document.getElementById("img-webp").srcset = sectionData.images.webp;
+      document.getElementById("img-png").src = sectionData.images.png;
 
-      document.getElementById("name").textContent = data.name;
-      document.getElementById("description").textContent = data.description;
+      document.getElementById("name").textContent = sectionData.name;
+      document.getElementById("description").textContent = sectionData.description;
 
-      document.getElementById("distance").textContent = data.distance;
-      document.getElementById("travel").textContent = data.travel;
+      document.getElementById("distance").textContent = sectionData.distance;
+      document.getElementById("travel").textContent = sectionData.travel;
     }
 
-    function technology(data) {
-      document.getElementById("img-landscape").src = data.images.landscape;
-      document.getElementById("img-portrait").srcset = data.images.portrait;
+    function technology(sectionData) {
+      document.getElementById("img-landscape").src = sectionData.images.landscape;
+      document.getElementById("img-portrait").srcset = sectionData.images.portrait;
 
-      document.getElementById("name").textContent = data.name;
-      document.getElementById("description").textContent = data.description;
+      document.getElementById("name").textContent = sectionData.name;
+      document.getElementById("description").textContent = sectionData.description;
     }
 
     return {

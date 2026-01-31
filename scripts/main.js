@@ -38,8 +38,8 @@ switch (true) {
 
   case file.includes("/crew/"):
     move.initialize();
-    const fowardBtn = document.querySelector("#forward-btn");
-    const backBtn = document.querySelector("#back-btn");
+    const fowardBtn = document.querySelector("#forward-btn"),
+      backBtn = document.querySelector("#back-btn");
 
     fowardBtn.addEventListener("click", move.looping.next);
     backBtn.addEventListener("click", move.looping.prev);

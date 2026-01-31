@@ -123,13 +123,13 @@ const move = (function () {
   }
 
   const renderDestination = (function () {
-    function crew(data) {
-      document.getElementById("img-webp").srcset = data.images.webp;
-      document.getElementById("img-png").src = data.images.png;
+    function crew(sectionData) {
+      document.getElementById("img-webp").srcset = sectionData.images.webp;
+      document.getElementById("img-png").src = sectionData.images.png;
 
-      document.getElementById("name").textContent = data.name;
-      document.getElementById("role").textContent = data.role;
-      document.getElementById("bio").textContent = data.bio;
+      document.getElementById("name").textContent = sectionData.name;
+      document.getElementById("role").textContent = sectionData.role;
+      document.getElementById("bio").textContent = sectionData.bio;
     }
 
     return {
